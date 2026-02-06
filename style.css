@@ -6,151 +6,133 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* BACKGROUND */
+/* BODY */
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at top, #111827, #020617);
-    color: #e5e7eb;
+    background: linear-gradient(180deg, #14001f, #0a0014);
+    color: #f5e9ff;
 }
 
-/* LAYOUT */
-.container {
-    max-width: 1200px;
+/* WRAPPER */
+.wrapper {
+    max-width: 1100px;
     margin: 40px auto;
     padding: 10px;
     display: flex;
-    gap: 25px;
-
-    /* animasi container */
-    animation: fadeIn 1s ease forwards;
+    gap: 30px;
+    animation: fadeIn 1s ease;
 }
 
-/* SIDEBAR */
-.sidebar {
-    width: 280px;
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 25px;
+/* PROFILE */
+.profile {
+    width: 300px;
+    background: linear-gradient(180deg, #1c0033, #120021);
+    border-radius: 18px;
+    padding: 30px;
     text-align: center;
-
-    animation: slideLeft 0.9s ease forwards;
+    border: 1px solid #3b0764;
+    animation: slideLeft 0.9s ease;
 }
 
-/* FOTO */
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    object-fit: cover;
+    border: 3px solid #a855f7;
     margin-bottom: 15px;
-    border: 2px solid #38bdf8;
+    object-fit: cover;
 }
 
-/* NAMA */
-.sidebar h1 {
-    font-size: 22px;
-    margin-bottom: 5px;
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
 }
 
-.subtitle {
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: #94a3b8;
+.role {
+    font-size: 14px;
+    color: #d8b4fe;
     margin-bottom: 20px;
 }
 
-/* INFO */
-.info p {
+.contact p {
     font-size: 14px;
-    margin-bottom: 12px;
-    color: #cbd5f5;
+    margin-bottom: 10px;
+    color: #e9d5ff;
 }
 
-/* MAIN */
-.main {
+/* CONTENT */
+.content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
 }
 
 /* CARD */
 .card {
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
+    background: linear-gradient(180deg, #1a002e, #10001d);
+    border: 1px solid #3b0764;
+    border-radius: 18px;
     padding: 25px;
-
-    /* animasi */
-    animation: slideUp 0.8s ease forwards;
+    animation: slideUp 0.8s ease;
 }
 
-/* JUDUL */
 .card h2 {
     font-size: 18px;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #1e293b;
+    margin-bottom: 15px;
+    color: #c084fc;
     letter-spacing: 1px;
 }
 
-/* ISI */
 .card p,
 .card li {
     font-size: 14px;
     line-height: 1.7;
-    color: #dbeafe;
+    color: #f3e8ff;
 }
 
-/* LIST */
 ul {
     padding-left: 18px;
 }
 
-/* TAG SKILL */
-.tags {
+/* SKILLS */
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.tags span {
-    padding: 6px 14px;
+.skills span {
+    padding: 7px 16px;
+    background: #2e1065;
+    border: 1px solid #6b21a8;
     border-radius: 999px;
     font-size: 13px;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    border: 1px solid #1e293b;
+    color: #f5e9ff;
     transition: 0.3s ease;
 }
 
-/* HOVER SKILL */
-.tags span:hover {
-    background: #38bdf8;
-    color: #020617;
+.skills span:hover {
+    background: #a855f7;
+    color: #1a002e;
     transform: translateY(-3px);
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .container {
+    .wrapper {
         flex-direction: column;
     }
 
-    .sidebar {
+    .profile {
         width: 100%;
     }
 }
 
-/* ================= ANIMATIONS ================= */
-
+/* ANIMATIONS */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideLeft {
